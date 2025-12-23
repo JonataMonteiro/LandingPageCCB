@@ -1,0 +1,44 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+}
+
+.navbar {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  height: 4em;
+  background: #141414;
+  padding: 0 2em;
+}
+
+.nav-logo img {
+  height: 30px;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 4em;
+}
+
+.nav-menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.btnav {
+  background-color: #e50914;
+  color: white;
+  border: none;
+  padding: 0.6em 1.5em;
+  cursor: pointer;
+  font-size: 16px;
+}
