@@ -42,3 +42,51 @@
   cursor: pointer;
   font-size: 16px;
 }
+
+.container-inicial {
+
+  justify-content: center;
+  align-items: center;
+  margin-left: 2em;
+  margin-top: 5em;
+
+  && h1 {
+    margin-left: 1em;
+  }
+
+  && h3 {
+    font-family: "Libre Baskerville", serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+    margin-left: 1.8em;
+  }
+
+  && button {
+    background-color: #D0181C;
+    color: #FFFAF5;
+    border: none;
+    padding: 0.6em 1.5em;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 2em;
+    margin-left: 2em;
+  }
+}
+
+.logoccb {
+  height: 15em;
+}
+
+.logoufc {
+  height: 13em;
+  margin-bottom: 2em;
+}
+
+.linha{
+  width: 51em;
+  height: 5px;
+  background-color: #141414;
+  margin-left: 2em;
+  margin-bottom: 1em;
+}
