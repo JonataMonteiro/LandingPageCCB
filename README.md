@@ -25,26 +25,6 @@ O Projeto Tecnologia em Educação propõe a exploração de ferramentas digitai
 
 ---
 
-<<<<<<< HEAD
-## 📂 Estrutura do Repositório
-
-A organização do repositório pode variar de acordo com a evolução do projeto, mas geralmente inclui:
-
-* `/docs` – Documentações e materiais conceituais
-* `/assets` – Recursos visuais e mídias
-* `/src` – Códigos e protótipos desenvolvidos
-* `/pages` – Estruturas de páginas e landing pages
-
----
-
-## 🚀 Tecnologias Utilizadas
-
-* HTML5
-* CSS3
-* JavaScript
-* Outras ferramentas educacionais e digitais, conforme a necessidade do projeto
-
-=======
 ## 🚀 Tecnologias Utilizadas
 
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
@@ -56,7 +36,6 @@ A organização do repositório pode variar de acordo com a evolução do projet
 
 ![Figma](https://img.shields.io/badge/Figma-0ACF83?style=for-the-badge&logo=figma&logoColor=white)
 
->>>>>>> a5b7737d31b522f23d65efe079c6cfa765c3cdb4
 ---
 
 ## 📄 Licença
@@ -72,11 +51,7 @@ Este projeto é de caráter educacional e cultural. A licença pode ser ajustada
 * Ash
 * Antonio Pedro
 * Irving Alves
-<<<<<<< HEAD
 * Francisco Tarcizio
-=======
-* Professor Francisco Tarcizio(CCB)
->>>>>>> a5b7737d31b522f23d65efe079c6cfa765c3cdb4
 
 ---
 
