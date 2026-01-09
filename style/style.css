@@ -34,6 +34,11 @@
   color: #FFFAF5;
   text-decoration: none;
   font-size: 16px;
+  transition: 0.3s;
+}
+
+.nav-menu a:hover {
+  color:#D0181C;
 }
 
 .btnav {
@@ -55,6 +60,7 @@
   && h1 {
     margin-left: 1em;
     font-size: 40px;
+    color:#001552;
   }
 
   && h3 {
@@ -79,18 +85,16 @@
 }
 
 .logoccb {
-  height: 15em;
-}
-
-.logoufc {
-  height: 13em;
-  margin-bottom: 2em;
+  height: 22em;
+  margin-bottom: 0em;
+  display: block;
+  margin-left: 2em;
 }
 
 .linha{
   width: 51em;
   height: 5px;
-  background-color: #141414;
+  background-color: #001552;
   margin-left: 2em;
   margin-bottom: 1em;
 }
