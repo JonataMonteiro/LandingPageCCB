@@ -188,16 +188,34 @@
 }
 
 .container-sobre {
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/assets/ccb.png'); 
-    background-size: cover; 
-    background-position: center;
-    
-    color: #FFFAF5;
-    padding: 20em 2em;
-    text-align: center;
-    display: flex;
-    justify-content: center;
+  position: relative;
+  overflow: hidden;
+
+  color: #FFFAF5;
+  padding: 20em 2em;
+  text-align: center;
+
+  display: flex;
+  justify-content: center;
 }
+
+.container-sobre::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url('/assets/ccb.png');
+
+  background-size: cover;
+  background-position: center;
+
+  filter: blur(3px);
+  transform: scale(1.1);
+  z-index: -1;
+}
+
 
 .sobre-content {
     width: 90%;
