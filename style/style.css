@@ -16,6 +16,7 @@
   background: #141414;
   padding: 0 2em;
   position: sticky;
+  z-index: 1;
   top: 0;
 }
 
@@ -89,6 +90,7 @@
   margin-bottom: 0em;
   display: block;
   margin-left: 2em;
+  color:#001552;
 }
 
 .linha{
@@ -217,6 +219,7 @@
     margin-left: auto;
     margin-right: auto;
 }
+
 
 .linha-sobre {
     position: relative;
