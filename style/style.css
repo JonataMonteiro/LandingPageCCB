@@ -61,6 +61,7 @@
   && h1 {
     margin-left: 1em;
     font-size: 40px;
+    font-weight: bold;
     color:#001552;
   }
 
@@ -69,8 +70,9 @@
     font-optical-sizing: auto;
     font-weight: normal;
     font-style: normal;
-    margin-left: 1.8em;
-    font-size: 24px;
+    margin-left: 2.5em;
+    margin-top: 0.8em;
+    font-size: 16px;
   }
 
   && button {
