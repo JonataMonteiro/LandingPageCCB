@@ -5,7 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ProjetoCCB</title>
-    <link rel="stylesheet" href="/style/style.css   ">
+    
+    <link rel="stylesheet" href="/style/style.css">
+    
+    <script src="/script/script.js" defer></script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
@@ -17,112 +21,155 @@
 
 <body>
     <nav class="navbar">
-            <div class="nav-logo">
-                <img src="/assets/logoccbalt.svg" alt="CCB">
-            </div>
+        <div class="nav-logo">
+            <img src="/assets/logoccbalt.svg" alt="CCB">
+        </div>
 
-            <ul class="nav-menu">
-                <li><a href="#inicio">Página Inicial</a></li>
-                <li><a href="#recursos">Recursos</a></li>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#objetivo">Nosso objetivo</a></li>
-            </ul>
-        </nav>
+        <ul class="nav-menu">
+            <li><a href="#inicio">Página Inicial</a></li>
+            <li><a href="#recursos">Recursos</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#objetivo">Nosso objetivo</a></li>
+        </ul>
+    </nav>
     <header>
 
         <div id="inicio" class="container-inicial">
             <img class="logoccb" src="/assets/logoccb.svg" alt="logoccb">
             <div class="linha"></div>
             <h1>Bem vindo ao projeto Tecnologia<br>em Educação no CCB</h1>
-            <h3>Uma iniciativa da da Casa de Cultura Britânica<br>da Universidade Federal do Ceará (UFC)que integra
+            <h3>Uma iniciativa da da Casa de Cultura Britânica<br>da Universidade Federal do Ceará (UFC) que integra
                 tecnologia<br>
                 e ensino de inglês para criar experiências de aprendizagem<br>criativas.</h3>
-            <button class="btn-saibamais"><a href="#sobre">SAIBA MAIS</a></button>
+            <button class="btn-saibamais"><a href="#sobre" style="color: inherit; text-decoration: none;">SAIBA MAIS</a></button>
         </div>
     </header>
 
     <section id="recursos" class="container-recursos">
-    <h2>ESPAÇO DE EXPERIMENTAÇÃO</h2>
-    <div class="linha-section"></div>
+        <h2>ESPAÇO DE EXPERIMENTAÇÃO</h2>
+        <div class="linha-section"></div>
 
-    <div class="recurso-item">
-        <div class="recurso-img">
-            <img src="placeholder" alt="Interactive Tales">
+        <div class="recurso-item">
+            <div class="recurso-img">
+                <img src="/assets/placeholder.png" alt="Interactive Tales">
+            </div>
+            <div class="recurso-texto">
+                <h3>HISTÓRIAS INTERATIVAS</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat.</p>
+                <button class="btn-experimentar">EXPERIMENTAR</button>
+            </div>
         </div>
-        <div class="recurso-texto">
-            <h3>HISTÓRIAS INTERATIVAS</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <button class="btn-experimentar">EXPERIMENTAR</button>
-        </div>
-    </div>
 
-    <div class="recurso-item">
-        <div class="recurso-img">
-            <img src="placeholder" alt="Quiz Adventure">
+        <div class="recurso-item">
+            <div class="recurso-img">
+                <img src="/assets/placeholder.png" alt="Quiz Adventure">
+            </div>
+            <div class="recurso-texto">
+                <h3>QUIZ ADVENTURE</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat.</p>
+                <button class="btn-experimentar">EXPERIMENTAR</button>
+            </div>
         </div>
-        <div class="recurso-texto">
-            <h3>QUIZ ADVENTURE</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <button class="btn-experimentar">EXPERIMENTAR</button>
-        </div>
-    </div>
 
-    <div class="recurso-item">
-        <div class="recurso-img">
-            <img src="placeholder" alt="Testes de Proficiência">
+        <div class="recurso-item">
+            <div class="recurso-img">
+                <img src="/assets/placeholder.png" alt="Testes de Proficiência">
+            </div>
+            <div class="recurso-texto">
+                <h3>TESTES DE PROFICIÊNCIA</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat.</p>
+                <button class="btn-experimentar">EXPERIMENTAR</button>
+            </div>
         </div>
-        <div class="recurso-texto">
-            <h3>TESTES DE PROFICIÊNCIA</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <button class="btn-experimentar">EXPERIMENTAR</button>
-        </div>
-    </div>
 
-    <div class="recurso-item">
-        <div class="recurso-img">
-            <img src="placeholder" alt="Folktale Reader">
+        <div class="recurso-item">
+            <div class="recurso-img">
+                <img src="/assets/placeholder.png" alt="Folktale Reader">
+            </div>
+            <div class="recurso-texto">
+                <h3>FOLKTALE READER</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat.</p>
+                <button class="btn-experimentar">EXPERIMENTAR</button>
+            </div>
         </div>
-        <div class="recurso-texto">
-            <h3>FOLKTALE READER</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <button class="btn-experimentar">EXPERIMENTAR</button>
-        </div>
-    </div>
-</section>
+    </section>
 
 
-<section id="sobre" class="container-sobre">
-    <div class="sobre-content">
-        <h2>Sobre o projeto</h2>
-        <div class="linha-sobre"></div>
+    <section id="sobre" class="container-sobre">
+        <div class="sobre-content">
+            <h2>Sobre o projeto</h2>
+            <div class="linha-sobre"></div>
+
+            <p class="p-top">O Projeto Tecnologia em Educação na Casa de Cultura Britânica é uma iniciativa da Casa de
+                Cultura da
+                Universidade Federal do Ceará (UFC) que integra tecnologia e ensino de inglês para criar experiências de
+                aprendizagem mais criativas, dinâmicas e envolventes.</p>
+
+            <p>O projeto propõe um espaço de experimentação e troca de conhecimentos, no qual alunos e professores
+                exploram
+                novas ferramentas, metodologias e ideias, fortalecendo a relação entre tecnologia e educação em língua
+                inglesa.</p>
+        </div>
+    </section>
+
+    <section id="objetivo" class="container-objetivo-carousel">
         
-        <p class="p-top">O Projeto Tecnologia em Educação na Casa de Cultura Britânica é uma iniciativa da Casa de Cultura da
-        Universidade Federal do Ceará (UFC) que integra tecnologia e ensino de inglês para criar experiências de
-        aprendizagem mais criativas, dinâmicas e envolventes.</p>
+        <div class="carousel-header">
+            <h2>NOSSO OBJETIVO</h2>
+            <div class="carousel-indicators">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+        
+        <div class="linha-carousel"></div>
 
-        <p>O projeto propõe um espaço de experimentação e troca de conhecimentos, no qual alunos e professores exploram
-        novas ferramentas, metodologias e ideias, fortalecendo a relação entre tecnologia e educação em língua
-        inglesa.</p>
-    </div>
-</section>
+        <div class="carousel-track">
+            
+            <div class="carousel-slide active">
+                <div class="slide-content">
+                    <h3>TECNOLOGIA COMO ALIADA</h3>
+                    <p>Exploramos o uso de ferramentas digitais para apoiar o ensino de inglês
+                    e tornar o aprendizado mais acessível, criativo e interativo.</p>
+                </div>
+                <div class="slide-img">
+                    <img src="/assets/placeholder.png" alt="Tecnologia como aliada">
+                </div>
+            </div>
 
-    <div id="objetivo" class="container-objetivo">
-        <h2>NOSSO OBJETIVO</h2>
-        <div class="objetivocard">
-            <h3>TECNOLOGIA COMO ALIADA</h3>
-            <p>Exploramos o uso
-                de ferramentas digitais para apoiar o ensino de inglês
-                e tornar o aprendizado mais acessível, criativo e interativo.</p>
+            <div class="carousel-slide">
+                <div class="slide-content">
+                    <h3>CONEXÃO ENTRE PESSOAS</h3>
+                    <p>Promovemos a aproximação entre alunos e professores por meio de práticas inovadoras que fortalecem a
+                    troca de experiências e o aprendizado colaborativo.</p>
+                </div>
+                <div class="slide-img">
+                    <img src="/assets/placeholder.png" alt="Conexão entre pessoas">
+                </div>
+            </div>
+
+            <div class="carousel-slide">
+                <div class="slide-content">
+                    <h3>ESPAÇO DE EXPERIMENTAÇÃO</h3>
+                    <p>Incentivamos a experimentação, o aprendizado contínuo e o compartilhamento de conhecimento em um ambiente
+                    aberto à inovação.</p>
+                </div>
+                <div class="slide-img">
+                    <img src="/assets/placeholder.png" alt="Espaço de experimentação">
+                </div>
+            </div>
+
         </div>
-        <div class="objetivocard">
-            <h3>CONEXÃO ENTRE PESSOAS</h3>
-            <p>Promovemos a aproximação entre alunos e professores por meio de práticas inovadoras que fortalecem a
-                troca de experiências e o aprendizado colaborativo.</p>
-        </div>
-        <div class="objetivocard">
-            <h3>ESPAÇO DE EXPERIMENTAÇÃO</h3>
-            <p>Incentivamos a experimentação, o aprendizado contínuo e o compartilhamento de conhecimento em um ambiente
-                aberto à inovação.</p>
-        </div>
-    </div>
+    </section>
+
+</body>
 </html>
