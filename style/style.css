@@ -16,7 +16,7 @@
   background: #141414;
   padding: 0 2em;
   position: sticky;
-  z-index: 100;
+  z-index: 1;
   top: 0;
 }
 
