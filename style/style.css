@@ -381,10 +381,12 @@
     }
 
     .carousel-slide.active {
-    flex-direction: column-reverse;
-    width: 20em;
-    height: 5px;
-    background-color: #FFFAF5;
+        flex-direction: column-reverse;
+    }
+    
+    .slide-img img {
+        height: 250px;
+    }
 }
 
 .main-footer {
