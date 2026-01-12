@@ -17,6 +17,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&display=swap"
         rel="stylesheet">
+        <link rel="stylesheet" href="../style/style.css">
 </head>
 
 <body>
@@ -35,7 +36,7 @@
     <header>
 
         <div id="inicio" class="container-inicial">
-            <img class="logoccb" src="/assets/logoccb.svg" alt="logoccb">
+            <img class="logoccb" src="../assets/logoccb.svg" alt="logoccb">
             <div class="linha"></div>
             <h1>Bem vindo ao projeto Tecnologia<br>em Educação no CCB</h1>
             <h3>Uma iniciativa da da Casa de Cultura Britânica<br>da Universidade Federal do Ceará (UFC) que integra
@@ -169,7 +170,33 @@
             </div>
 
         </div>
-    </section>
+    </div>
+</section>
+  <footer class="main-footer">
+    <div class="footer-container">
+        <div class="footer-column info-col">
+            <img src="../assets/logoccb.svg" alt="CCB Logo" class="footer-logo">
+            <p>Casa de Cultura Britânica</p>
+            <address>
+                <p>Av. da Universidade, 2683 - Benfica, Fortaleza - CE</p>
+                <p>(85) 9999-9999</p>
+                <p> <a href="mailto:contato@ccb.com">EmailDoTarcicio@gmail.com</a></p>
+            </address>
+        </div>
+
+        <div class="footer-column form-col">
+            <h3>Envie uma mensagem</h3>
+            <form action="https://formspree.io/f/xaqqywdp" method="POST" class="footer-form">
+                <input type="email" name="email" placeholder="Seu e-mail" required>
+                <textarea name="mensagem" placeholder="Sua mensagem" rows="3" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2026 Tecnologia & Educação - CCB. Todos os direitos reservados.</p>
+    </div>
+</footer>
 
 </body>
 </html>
