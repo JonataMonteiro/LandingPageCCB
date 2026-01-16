@@ -13,11 +13,43 @@
   grid-template-columns: auto 1fr auto;
   align-items: center;
   height: 4em;
-  background: #141414;
   padding: 0 2em;
-  position: sticky;
-  z-index: 1;
+  position: absolute;
+  width: 100%;       
   top: 0;
+  left: 0;
+  z-index: 10;        
+  background: transparent;
+}
+
+.container-header {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding: 150px 0; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.container-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url('/assets/ccb.png');
+  
+  background-size: 100% auto;
+  background-position: center 20%;
+  background-repeat: no-repeat;
+  
+  filter: blur(3px);
+  transform: scale(1.02); 
+  z-index: -1;
 }
 
 .nav-logo img {
@@ -52,26 +84,30 @@
 }
 
 .container-inicial {
+  text-align: center;
   justify-content: center;
   align-items: center;
   margin-left: 2em;
   margin-top: 5em;
 
+
   h1 {
     margin-left: 1em;
+    font-family: "Libre Baskerville";
     font-size: 40px;
     font-weight: bold;
-    color: #001552;
+    color: #ffffff;
   }
 
   h3 {
-    font-family: "Libre Baskerville", serif;
+    font-family: "Schibsted Grotesk", serif;
     font-optical-sizing: auto;
     font-weight: normal;
     font-style: normal;
     margin-left: 2.5em;
     margin-top: 0.8em;
     font-size: 16px;
+    color: #ffffff;
   }
 
   button {
@@ -87,20 +123,14 @@
 }
 
 .logoccb {
-  height: 22em;
-  margin-bottom: 0em;
+  height: 12em; 
+  margin: 0 auto 1.5em auto; 
   display: block;
-  margin-left: 2em;
-  color: #001552;
+  width: auto; 
+  color: #ffffff; 
 }
 
-.linha {
-  width: 51em;
-  height: 5px;
-  background-color: #001552;
-  margin-left: 2em;
-  margin-bottom: 1em;
-}
+
 
 .container-recursos {
   padding: 4em 4em;
@@ -196,19 +226,7 @@
   justify-content: center;
 }
 
-.container-sobre::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url('/assets/ccb.png');
-  background-size: cover;
-  background-position: center;
-  filter: blur(3px);
-  transform: scale(1.1);
-  z-index: -1;
-}
+
 
 .sobre-content {
   width: 90%;
