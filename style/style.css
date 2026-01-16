@@ -212,7 +212,6 @@
   align-self: flex-start;
 }
 
-/* fundo animado */
 .btn-experimentar::before {
   content: "";
   position: absolute;
@@ -223,19 +222,16 @@
   z-index: 0;
 }
 
-/* hover */
 .btn-experimentar:hover::before{
   transform: translateX(0);
 }
 
-/* texto */
 .btn-experimentar span {
   position: relative;
   z-index: 1;
   transition: color 0.3s ease;
 }
 
-/* texto azul no hover */
 .btn-experimentar:hover span {
   color: #0b2a5a;
 }
@@ -265,7 +261,6 @@
   background-image: url("/assets/img-leitura.png");
 }
 
-/* Seção Sobre - Texto Encostado à Esquerda */
 .container-sobre {
   background-color: #001552;
   color: #FFFAF5;
@@ -273,25 +268,22 @@
   flex-direction: row;
   align-items: flex-start;
   justify-content: space-between;
-  /* ALTERAÇÃO PRINCIPAL: Padding da esquerda reduzido para 4% para "encostar" o texto */
-  padding: 5em 2% 5em 2%; 
+  padding: 5em 4% 5em 4%; 
   gap: 4em; 
   position: relative;
   overflow: hidden;
 }
 
-/* --- Coluna da Esquerda (Texto) --- */
 .sobre-content {
   flex: 0 0 auto;
   display: flex;
   flex-direction: column;
-  /* Largura base ajustada para manter a mancha de texto correta */
   width: 55%; 
 }
 
 .sobre-content h2 {
   font-family: "Libre Baskerville", serif;
-  font-size: 42px;
+  font-size: 56px;
   font-weight: 400;
   margin-top: 0;
   margin-bottom: 0.2em;
@@ -299,10 +291,8 @@
   text-align: left;
 }
 
-/* Linha divisória */
 .linha-sobre {
-  width: 100%;
-  max-width: 600px; /* Mantém a linha do tamanho do texto */
+  width: 1100px;
   height: 1px;
   background-color: #FFFAF5;
   margin-bottom: 3em;
@@ -312,30 +302,26 @@
   content: none;
 }
 
-/* Texto Principal */
 .texto-principal {
   font-family: "Libre Baskerville", serif;
-  font-size: 30px;
+  font-size: 28px;
   line-height: 1.5;
   margin-bottom: 2em;
   font-weight: 400;
   text-align: left;
-  /* Trava a largura para garantir a quebra de linha do protótipo */
-  max-width: 600px; 
+  max-width: 1000px; 
 }
 
-/* Caixa com Borda Branca */
 .caixa-destaque {
   border: 1px solid #FFFAF5;
-  padding: 2.2em;
+  padding: 2.5em 1.2em;
   width: 100%;
-  max-width: 600px; /* Trava a largura da caixa */
   box-sizing: border-box;
 }
 
 .caixa-destaque p {
   font-family: "Manrope", sans-serif;
-  font-size: 16px;
+  font-size: 24px;
   line-height: 1.6;
   color: #FFFAF5;
   margin: 0;
@@ -343,30 +329,27 @@
   font-weight: normal;
 }
 
-/* --- Coluna da Direita (Imagem) --- */
 .sobre-img {
   flex: 1; 
   display: flex;
-  justify-content: flex-end; /* Mantém a imagem alinhada à direita */
+  justify-content: flex-end;
   
-  /* Margem para alinhar o topo da imagem com a linha divisória */
   margin-top: 55px; 
 }
 
 .sobre-img img {
   width: 100%;
-  max-width: 700px; /* Permite que a imagem cresça um pouco mais */
+  max-width: 700px;
   height: auto;
   min-height: 500px;
   object-fit: cover;
   display: block;
 }
 
-/* Responsividade */
 @media (max-width: 1100px) {
   .container-sobre {
     flex-direction: column;
-    padding: 3em 5%; /* No mobile, um padding padrão de 5% funciona bem */
+    padding: 3em 5%;
     gap: 3em;
   }
   
