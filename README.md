@@ -60,6 +60,9 @@ Este projeto é de caráter educacional e cultural. A licença pode ser ajustada
 **Casa de Cultura Britânica**
 Universidade Federal do Ceará (UFC)
 
+**Instituto UFC Virtual**
+Curso de Sistemas e Mídias Digitais
+
 ---
 
 ✨ Projeto desenvolvido para fomentar inovação, tecnologia e educação em língua inglesa.
