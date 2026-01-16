@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ProjetoCCB</title>
-    
+
     <link rel="stylesheet" href="/style/style.css">
-    
+
     <script src="/script/script.js" defer></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,12 +19,15 @@
         rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&display=swap"
+        rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
 
-        <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/style.css">
 </head>
 
 <body>
@@ -41,76 +44,125 @@
         </ul>
     </nav>
     <header>
-        <section id = "header" class = "container-header">
-        <div id="inicio" class="container-inicial">
-            <img class="logoccb" src="../assets/logo ccb branca.svg" alt="logoccb">
-            <div class="linha"></div>
-            <h1>Bem vindo ao projeto Tecnologiaem Educação no CCB</h1>
-            <h3>Uma iniciativa da da Casa de Cultura Britânicada Universidade Federal do Ceará (UFC) que integra
-                tecnologia<br>
-                e ensino de inglês para criar experiências de aprendizagem<br>criativas.</h3>
-            <button class="btn-saibamais"><a href="#sobre" style="color: inherit; text-decoration: none;">SAIBA MAIS</a></button>
-        </div>
+        <section id="header" class="container-header">
+            <div id="inicio" class="container-inicial">
+                <img class="logoccb" src="../assets/logo ccb branca.svg" alt="logoccb">
+                <h1>Bem vindo ao projeto Tecnologiaem Educação no CCB</h1>
+                <h3>Uma iniciativa da da Casa de Cultura Britânicada Universidade Federal do Ceará (UFC) que integra
+                    tecnologia<br>
+                    e ensino de inglês para criar experiências de aprendizagem<br>criativas.</h3>
+                <a href="#sobre" class="btn-saibamais">
+                    SAIBA MAIS
+                </a>
+
+            </div>
         </section>
     </header>
 
-    <section id="recursos" class="container-recursos">
-        <h2>ESPAÇO DE EXPERIMENTAÇÃO</h2>
-        <div class="linha-section"></div>
+    <section id="recursos" class="recursos">
 
+        <h2>Recursos</h2>
+        <div class="linha"></div>
+
+        <!-- 1 -->
         <div class="recurso-item">
-            <div class="recurso-img">
-                <img src="/assets/placeholder.png" alt="Interactive Tales">
-            </div>
-            <div class="recurso-texto">
+            <div class="recurso-texto bg-historia">
                 <h3>HISTÓRIAS INTERATIVAS</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat.</p>
-                <button class="btn-experimentar">EXPERIMENTAR</button>
+                <p>
+                    Uma experiência gamificada que une leitura, áudio e tomadas de decisão em narrativas inspiradas na
+                    mitologia grega.
+                    O aplicativo permite praticar vocabulário, interpretação e listening enquanto o estudante acompanha
+                    uma história que muda conforme suas escolhas.
+                </p>
+                <a href="https://interative-tales.vercel.app" target="_blank" class="btn-experimentar">
+                    <span>EXPERIMENTAR</span>
+                </a>
+
+            </div>
+            <div class="recurso-img">
+                <img src="/assets/img-historia2.png" alt="">
             </div>
         </div>
 
-        <div class="recurso-item">
-            <div class="recurso-img">
-                <img src="/assets/placeholder.png" alt="Quiz Adventure">
+        <!-- 2 -->
+        <div class="recurso-item reverse">
+            <div class="recurso-texto bg-questoes">
+                <h3>GERADOR DE QUESTÕES</h3>
+                <p>
+                    Um aplicativo criado para apoiar o estudo de inglês na Casa de Cultura Britânica. O Gerador de
+                    Questões oferece atividades baseadas nos materiais da instituição, ajudando alunos e professores no
+                    processo de aprendizado.Uma ferramenta feita para praticar, revisar e aprender de forma mais
+                    acessível e interativa.
+                </p>
+                <a href="https://ccb-quiz-generator.streamlit.app/"target="_blank" class="btn-experimentar">
+                    <span>EXPERIMENTAR</span>
+                </a>
+
             </div>
-            <div class="recurso-texto">
-                <h3>QUIZ ADVENTURE</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat.</p>
-                <button class="btn-experimentar">EXPERIMENTAR</button>
+            <div class="recurso-img">
+                <img src="/assets/img-prova.png" alt="">
             </div>
         </div>
 
+        <!-- 3 -->
         <div class="recurso-item">
-            <div class="recurso-img">
-                <img src="/assets/placeholder.png" alt="Testes de Proficiência">
+            <div class="recurso-texto bg-audio">
+                <h3>COMPREENSÃO AUDITIVA</h3>
+                <p>
+                    Pratique seu Inglês iniciante de forma envolvente. Nossa aplicação transforma a escuta e a
+                    interpretação em níveis de jogo: ouça, responda questões e colete estrelas para avançar!
+                </p>
+                <a href="https://listening-app-ccb.vercel.app/" target="_blank" class="btn-experimentar">
+                    <span>EXPERIMENTAR</span>
+                </a>
             </div>
-            <div class="recurso-texto">
-                <h3>TESTES DE PROFICIÊNCIA</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat.</p>
-                <button class="btn-experimentar">EXPERIMENTAR</button>
+            <div class="recurso-img">
+                <img src="/assets/img-audio2.png" alt="">
             </div>
         </div>
 
-        <div class="recurso-item">
-            <div class="recurso-img">
-                <img src="/assets/placeholder.png" alt="Folktale Reader">
+        <!-- 4 -->
+        <div class="recurso-item reverse">
+            <div class="recurso-texto bg-folk">
+                <h3>CONTOS FOLCLÓRICOS BRASILEIROS</h3>
+                <p>
+                    Já pensou em praticar inglês enquanto conhece as histórias do nosso folclore? O Brazilian Folk Tales
+                    é um aplicativo que une cultura
+                    e aprendizado: você lê, escuta e responde questões de interpretação.Um jeito divertido de estudar
+                    inglês e valorizar nossas raízes.
+                </p>
+                <a href="https://brazilian-folktales-app.onrender.com"target="_blank" class="btn-experimentar">
+                    <span>EXPERIMENTAR</span>
+                </a>
+
             </div>
-            <div class="recurso-texto">
-                <h3>FOLKTALE READER</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat.</p>
-                <button class="btn-experimentar">EXPERIMENTAR</button>
+            <div class="recurso-img">
+                <img src="/assets/img-folk.png" alt="">
             </div>
         </div>
+
+        <!-- 5 -->
+        <div class="recurso-item">
+            <div class="recurso-texto bg-leitura">
+                <h3>TESTES DE PROFICIÊNCIA LEITORA</h3>
+                <p>
+                    Uma plataforma de prática voltada ao aprimoramento da leitura acadêmica em inglês, oferecendo testes
+                    cronometrados com textos e questões que simulam exames de proficiência.
+
+                    O ambiente estimula a compreensão global, a interpretação de vocabulário em contexto e a análise de
+                    ideias e argumentos, promovendo uma preparação mais segura e direcionada.
+                </p>
+                <a href="https://projeto-teste-de-proficiencia.vercel.app/" target="_blank" class="btn-experimentar">
+                    <span>EXPERIMENTAR</span>
+                </a>
+
+            </div>
+            <div class="recurso-img">
+                <img src="/assets/img-leitura2.png" alt="">
+            </div>
+        </div>
+
     </section>
-
 
     <section id="sobre" class="container-sobre">
         <div class="sobre-content">
@@ -130,7 +182,7 @@
     </section>
 
     <section id="objetivo" class="container-objetivo-carousel">
-        
+
         <div class="carousel-header">
             <h2>NOSSO OBJETIVO</h2>
             <div class="carousel-indicators">
@@ -139,16 +191,16 @@
                 <span class="dot"></span>
             </div>
         </div>
-        
+
         <div class="linha-carousel"></div>
 
         <div class="carousel-track">
-            
+
             <div class="carousel-slide active">
                 <div class="slide-content">
                     <h3>TECNOLOGIA COMO ALIADA</h3>
                     <p>Exploramos o uso de ferramentas digitais para apoiar o ensino de inglês
-                    e tornar o aprendizado mais acessível, criativo e interativo.</p>
+                        e tornar o aprendizado mais acessível, criativo e interativo.</p>
                 </div>
                 <div class="slide-img">
                     <img src="/assets/placeholder.png" alt="Tecnologia como aliada">
@@ -158,8 +210,9 @@
             <div class="carousel-slide">
                 <div class="slide-content">
                     <h3>CONEXÃO ENTRE PESSOAS</h3>
-                    <p>Promovemos a aproximação entre alunos e professores por meio de práticas inovadoras que fortalecem a
-                    troca de experiências e o aprendizado colaborativo.</p>
+                    <p>Promovemos a aproximação entre alunos e professores por meio de práticas inovadoras que
+                        fortalecem a
+                        troca de experiências e o aprendizado colaborativo.</p>
                 </div>
                 <div class="slide-img">
                     <img src="/assets/placeholder.png" alt="Conexão entre pessoas">
@@ -169,8 +222,9 @@
             <div class="carousel-slide">
                 <div class="slide-content">
                     <h3>ESPAÇO DE EXPERIMENTAÇÃO</h3>
-                    <p>Incentivamos a experimentação, o aprendizado contínuo e o compartilhamento de conhecimento em um ambiente
-                    aberto à inovação.</p>
+                    <p>Incentivamos a experimentação, o aprendizado contínuo e o compartilhamento de conhecimento em um
+                        ambiente
+                        aberto à inovação.</p>
                 </div>
                 <div class="slide-img">
                     <img src="/assets/placeholder.png" alt="Espaço de experimentação">
@@ -178,33 +232,34 @@
             </div>
 
         </div>
-    </div>
-</section>
-  <footer class="main-footer">
-    <div class="footer-container">
-        <div class="footer-column info-col">
-            <img src="../assets/logoccb.svg" alt="CCB Logo" class="footer-logo">
-            <p>Casa de Cultura Britânica</p>
-            <address>
-                <p>Av. da Universidade, 2683 - Benfica, Fortaleza - CE</p>
-                <p>(85) 9999-9999</p>
-                <p> <a href="mailto:contato@ccb.com">EmailDoTarcicio@gmail.com</a></p>
-            </address>
         </div>
+    </section>
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-column info-col">
+                <img src="../assets/logoccb.svg" alt="CCB Logo" class="footer-logo">
+                <p>Casa de Cultura Britânica</p>
+                <address>
+                    <p>Av. da Universidade, 2683 - Benfica, Fortaleza - CE</p>
+                    <p>(85) 9999-9999</p>
+                    <p> <a href="mailto:contato@ccb.com">EmailDoTarcicio@gmail.com</a></p>
+                </address>
+            </div>
 
-        <div class="footer-column form-col">
-            <h3>Envie uma mensagem</h3>
-            <form action="https://formspree.io/f/xaqqywdp" method="POST" class="footer-form">
-                <input type="email" name="email" placeholder="Seu e-mail" required>
-                <textarea name="mensagem" placeholder="Sua mensagem" rows="3" required></textarea>
-                <button type="submit">Enviar</button>
-            </form>
+            <div class="footer-column form-col">
+                <h3>Envie uma mensagem</h3>
+                <form action="https://formspree.io/f/xaqqywdp" method="POST" class="footer-form">
+                    <input type="email" name="email" placeholder="Seu e-mail" required>
+                    <textarea name="mensagem" placeholder="Sua mensagem" rows="3" required></textarea>
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
         </div>
-    </div>
-    <div class="footer-bottom">
-        <p>&copy; 2026 Tecnologia & Educação - CCB. Todos os direitos reservados.</p>
-    </div>
-</footer>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Tecnologia & Educação - CCB. Todos os direitos reservados.</p>
+        </div>
+    </footer>
 
 </body>
+
 </html>
