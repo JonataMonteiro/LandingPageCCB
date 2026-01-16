@@ -216,57 +216,129 @@
   background-color: #b01417;
 }
 
+/* Seção Sobre - Texto Encostado à Esquerda */
 .container-sobre {
+  background-color: #001552;
+  color: #FFFAF5;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  /* ALTERAÇÃO PRINCIPAL: Padding da esquerda reduzido para 4% para "encostar" o texto */
+  padding: 5em 2% 5em 2%; 
+  gap: 4em; 
   position: relative;
   overflow: hidden;
-  color: #FFFAF5;
-  padding: 20em 2em;
-  text-align: center;
-  display: flex;
-  justify-content: center;
 }
 
-
-
+/* --- Coluna da Esquerda (Texto) --- */
 .sobre-content {
-  width: 90%;
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  /* Largura base ajustada para manter a mancha de texto correta */
+  width: 55%; 
 }
 
-.container-sobre h2 {
-  font-size: 36px;
-  margin-bottom: 0.5em;
-  color: #FFFAF5;
-}
-
-.container-sobre p {
+.sobre-content h2 {
   font-family: "Libre Baskerville", serif;
-  font-size: 28px;
-  line-height: 1.8;
-  margin-bottom: 1.5em;
+  font-size: 42px;
   font-weight: 400;
-  max-width: 55em;
-  margin-left: auto;
-  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0.2em;
+  color: #FFFAF5;
+  text-align: left;
 }
 
+/* Linha divisória */
 .linha-sobre {
-  position: relative;
   width: 100%;
+  max-width: 600px; /* Mantém a linha do tamanho do texto */
   height: 1px;
   background-color: #FFFAF5;
-  margin-bottom: 4em;
-  margin-top: 0em;
+  margin-bottom: 3em;
 }
 
 .linha-sobre::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  top: -3.2px;
-  width: 20em;
-  height: 5px;
-  background-color: #FFFAF5;
+  content: none;
+}
+
+/* Texto Principal */
+.texto-principal {
+  font-family: "Libre Baskerville", serif;
+  font-size: 30px;
+  line-height: 1.5;
+  margin-bottom: 2em;
+  font-weight: 400;
+  text-align: left;
+  /* Trava a largura para garantir a quebra de linha do protótipo */
+  max-width: 600px; 
+}
+
+/* Caixa com Borda Branca */
+.caixa-destaque {
+  border: 1px solid #FFFAF5;
+  padding: 2.2em;
+  width: 100%;
+  max-width: 600px; /* Trava a largura da caixa */
+  box-sizing: border-box;
+}
+
+.caixa-destaque p {
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #FFFAF5;
+  margin: 0;
+  text-align: left;
+  font-weight: normal;
+}
+
+/* --- Coluna da Direita (Imagem) --- */
+.sobre-img {
+  flex: 1; 
+  display: flex;
+  justify-content: flex-end; /* Mantém a imagem alinhada à direita */
+  
+  /* Margem para alinhar o topo da imagem com a linha divisória */
+  margin-top: 55px; 
+}
+
+.sobre-img img {
+  width: 100%;
+  max-width: 700px; /* Permite que a imagem cresça um pouco mais */
+  height: auto;
+  min-height: 500px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Responsividade */
+@media (max-width: 1100px) {
+  .container-sobre {
+    flex-direction: column;
+    padding: 3em 5%; /* No mobile, um padding padrão de 5% funciona bem */
+    gap: 3em;
+  }
+  
+  .sobre-content {
+    width: 100%;
+  }
+  
+  .texto-principal, 
+  .caixa-destaque,
+  .linha-sobre {
+    max-width: 100%;
+  }
+
+  .sobre-img {
+    margin-top: 0;
+    justify-content: center;
+  }
+  
+  .sobre-img img {
+    max-width: 100%;
+  }
 }
 
 .container-objetivo-carousel {
