@@ -16,7 +16,7 @@
   background: #141414;
   padding: 0 2em;
   position: sticky;
-  z-index: 1;
+  z-index: 10;
   top: 0;
 }
 
@@ -102,88 +102,130 @@
   margin-bottom: 1em;
 }
 
-.container-recursos {
-  padding: 4em 4em;
-  background-color: #fff;
+.recursos {
+  min-height: 100vh;
+  padding: 4rem 1rem;
+}
+
+.recursos h2 {
+  color: #0b2a5a;
+  font-size: 1.6rem;
+}
+
+.linha {
+  height: 2px;
+  background: #0b2a5a;
+  margin: 1rem 0 3rem;
+}
+
+/* GRID */
+.recurso-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 320px;
+  margin-bottom: 0.5em;
+  gap: 0.5em;
+}
+
+.recurso-item.reverse {
+  direction: rtl;
+}
+
+.recurso-item.reverse > * {
+  direction: ltr;
+}
+
+/* TEXTO */
+.recurso-texto {
+  position: relative;
+  padding: 2.5rem;
+  color: #fff;
   display: flex;
   flex-direction: column;
-  gap: 0em;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
 }
-
-.container-recursos h2 {
-  font-size: 32px;
-  margin-bottom: 0em;
-  color: #141414;
-}
-
-.linha-section {
+.recurso-texto  {
   position: relative;
-  width: 100%;
-  height: 3px;
-  background-color: #000;
-  margin-bottom: 3em;
-  margin-top: 0em;
-}
-
-.linha-section::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: -3px;
-
-  width: 29em;
-  height: 5px;
-  background-color: #141414;
-}
-
-.recurso-item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 4em;
-  margin-bottom: 4em;
-}
-
-.recurso-item:nth-child(even) {
-  flex-direction: row-reverse;
-}
-
-.recurso-img {
-  flex: 1;
-}
-
-.recurso-texto {
-  flex: 1;
-  padding: 0 1em;
+  z-index: 1;
 }
 
 .recurso-texto h3 {
-  font-family: "Manrope", sans-serif;
-  font-size: 28px;
-  margin-bottom: 0.5em;
-  color: #141414;
+  margin-bottom: 3em;
 }
 
 .recurso-texto p {
-  font-size: 18px;
   line-height: 1.6;
-  margin-bottom: 1.5em;
-  color: #333;
+  margin-bottom: 5em;
 }
 
-.btn-experimentar {
-  background-color: #D0181C;
-  color: #FFFAF5;
-  border: none;
-  padding: 0.8em 2em;
+.recurso-texto button {
+  position: relative;
+  align-self: flex-start;
+  padding: 0.6rem 1.4rem;
+  background: transparent;
+  border: 1px solid #fff;
+  color: #fff;
   cursor: pointer;
-  font-size: 16px;
-  font-weight: bold;
-  transition: background-color 0.3s;
+  font-size: 0.8rem;
+  overflow: hidden;
+  transition: color 0.3s ease;
 }
 
-.btn-experimentar:hover {
-  background-color: #b01417;
+/* camada que preenche */
+.recurso-texto button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #fff;
+  transform: translateX(-100%);
+  transition: transform 0.4s ease;
+  z-index: 0;
+}
+
+/* hover */
+.recurso-texto button:hover::before {
+  transform: translateX(0);
+}
+
+
+/* garante texto acima do preenchimento */
+.recurso-texto button span {
+  position: relative;
+  z-index: 1;
+}
+.recurso-texto button:hover span {
+  color: #0b2a5a;
+}
+
+
+
+/* IMAGEM */
+.recurso-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.bg-historia {
+  background-image: url("/assets/img-historia.png");
+}
+
+.bg-questoes {
+  background-image: url("/assets/img-prova2.png");
+}
+
+.bg-audio {
+  background-image: url("/assets/img-audio.png");
+}
+
+.bg-folk {
+  background-image: url("/assets/img-folk2.png");
+}
+
+.bg-leitura {
+  background-image: url("/assets/img-leitura.png");
 }
 
 .container-sobre {
