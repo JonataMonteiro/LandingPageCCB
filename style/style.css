@@ -132,9 +132,7 @@ body{
     font-size: 16px;
     margin-top: 8em;
   }
-  .btn-saibamais:hover{
-    translate:
-  }
+
     
   
   button {
@@ -232,10 +230,6 @@ body{
   align-self: flex-start;
 }
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 7b9d234780a24717aa9cb7beb2db770658becbd3
 .btn-experimentar::before {
   content: "";
   position: absolute;
@@ -246,28 +240,16 @@ body{
   z-index: 0;
 }
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 7b9d234780a24717aa9cb7beb2db770658becbd3
 .btn-experimentar:hover::before{
   transform: translateX(0);
 }
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 7b9d234780a24717aa9cb7beb2db770658becbd3
 .btn-experimentar span {
   position: relative;
   z-index: 1;
   transition: color 0.3s ease;
 }
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 7b9d234780a24717aa9cb7beb2db770658becbd3
 .btn-experimentar:hover span {
   color: #0b2a5a;
 }
