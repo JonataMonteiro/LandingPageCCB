@@ -12,6 +12,7 @@ img {
 
 body{
   background-color: #fdfaf5;
+  overflow-x: hidden;
 }
 .navbar {
   display: grid;
@@ -61,13 +62,14 @@ body{
   position: relative;
   overflow: hidden;
   width: 100%;
-  padding: 150px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
   color: white;
+  min-height: 100vh;
+  padding: 0;
 }
 
 .container-header::before {
@@ -78,8 +80,8 @@ body{
     linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
     url('/assets/ccb.png');
 
-  background-size: 100% auto;
-  background-position: center 20%;
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
 
   filter: blur(3px);
@@ -132,7 +134,9 @@ body{
     font-size: 16px;
     margin-top: 8em;
   }
-
+  .btn-saibamais:hover{
+    translate:
+  }
     
   
   button {
@@ -230,6 +234,7 @@ body{
   align-self: flex-start;
 }
 
+
 .btn-experimentar::before {
   content: "";
   position: absolute;
@@ -240,15 +245,18 @@ body{
   z-index: 0;
 }
 
+
 .btn-experimentar:hover::before{
   transform: translateX(0);
 }
+
 
 .btn-experimentar span {
   position: relative;
   z-index: 1;
   transition: color 0.3s ease;
 }
+
 
 .btn-experimentar:hover span {
   color: #0b2a5a;
@@ -390,7 +398,6 @@ body{
     max-width: 100%;
   }
 }
-
 .container-objetivo-carousel {
   padding: 4em 4em;
   background-color: #FFFAF5;
@@ -658,14 +665,16 @@ address p {
 @media (max-width: 768px) {
   .hamburger {
     display: flex;
+    margin-left: auto;
   }
 
-  .nav-menu {
-    position: absolute;
+   .nav-menu {
+    position: fixed;
     top: 4em;
-    left: 0;
-    width: 100%;
+    right: 0;
+    width: 100vw;
     height: calc(100vh - 4em);
+
     background: #000;
     flex-direction: column;
     align-items: center;
@@ -674,18 +683,24 @@ address p {
 
     transform: translateX(100%);
     transition: transform 0.3s ease;
+
+    /* 🔑 ESSENCIAL */
+    z-index: -1;
+    pointer-events: none;
   }
 
   .nav-menu.active {
     transform: translateX(0);
+    z-index: 20;
+    pointer-events: auto;
   }
 
   .nav-menu a {
     font-size: 20px;
   }
   .nav-logo img{
-   margin-right: auto;
-   margin-left: auto;
+   justify-content: center;
+   align-items: center;
   }
 }
 
