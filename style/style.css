@@ -24,7 +24,7 @@ body{
   width: 100%;
   top: 0;
   left: 0;
-  z-index: 10;
+  z-index: 1000;
   background: #000;
 }
 .nav-menu {
@@ -124,21 +124,31 @@ body{
   }
 
   .btn-saibamais {
-    color: inherit;
-    text-decoration: none;
-    background-color: #D0181C;
-    color: #FFFAF5;
-    border: none;
-    padding: 0.6em 1.5em;
-    cursor: pointer;
-    font-size: 16px;
-    margin-top: 8em;
-  }
-  .btn-saibamais:hover{
-    translate:
-  }
-    
+  color: #FFFAF5;
+  text-decoration: none;
+  background-color: #D0181C;
+  border: none;
+  padding: 0.6em 1.5em;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 8em;
+
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease,
+    box-shadow 0.3s ease;
+}
+.btn-saibamais:hover {
+  background-color: #b81418;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+.btn-saibamais:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
   
+    
   button {
     background-color: #D0181C;
     color: #FFFAF5;
@@ -404,6 +414,8 @@ body{
   color: #141414;
   min-height: 500px;
   width: 100%;
+  position: relative;
+  overflow: hidden; /* Garante que nada vaze */
 }
 
 .carousel-header {
@@ -423,6 +435,7 @@ body{
   display: flex;
   gap: 12px;
   padding-right: 10px;
+  z-index: 10; /* Garante que fique acima de tudo */
 }
 
 .dot {
@@ -432,14 +445,23 @@ body{
   border-radius: 50%;
   display: inline-block;
   cursor: pointer;
-  opacity: 0.3;
-  transition: all 0.3s ease;
+  opacity: 0.3; /* Estado inativo padrão */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  -webkit-tap-highlight-color: transparent; /* Remove o flash azul ao tocar no Android */
 }
 
-.dot.active,
-.dot:hover {
-  opacity: 1;
-  transform: scale(1.1);
+/* Estado ATIVO (Slide atual) */
+.dot.active {
+  opacity: 1 !important; /* Força a opacidade total */
+  transform: scale(1.2);
+}
+
+/* Estado HOVER (Apenas para computadores/mouse) */
+@media (hover: hover) {
+  .dot:hover {
+    opacity: 0.7; /* Um pouco menos que o active para diferenciar */
+    transform: scale(1.1);
+  }
 }
 
 .linha-carousel {
@@ -450,17 +472,26 @@ body{
   margin-bottom: 3em;
 }
 
+/* A TRILHA (Correção Principal aqui) */
+.carousel-track {
+  width: 100%;
+  position: relative;
+  display: block; /* IMPORTANTE: Não use flex aqui */
+}
 
+/* O SLIDE */
 .carousel-slide {
-  display: none;
+  display: none; /* Esconde todos por padrão */
+  width: 100%;   /* Ocupa toda a largura */
   justify-content: space-between;
   gap: 4em;
   padding-top: 1em;
   animation: fadeEffect 0.6s ease-in-out;
 }
 
+/* Apenas o slide ATIVO aparece e usa Flexbox para alinhar texto/imagem */
 .carousel-slide.active {
-  display: flex;
+  display: flex; 
 }
 
 .slide-content {
@@ -491,177 +522,271 @@ body{
 
 .slide-content p {
   font-family: "Schibsted Grotesk", serif;
-    font-optical-sizing: auto;
-    font-weight: normal;
-    font-style: normal;
   font-size: 18px;
   line-height: 1.6;
-  color: #333;
+  color: #001552;
   max-width: 95%;
   font-weight: normal;
-   color: #001552;
 }
 
 .slide-img {
   flex: 1;
   display: flex;
+  height: 550px;
 }
 
 .slide-img img {
   width: 100%;
   height: 100%;
-  min-height: 550px;
   object-fit: cover;
 }
 
 @keyframes fadeEffect {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
-
+/* Responsividade */
 @media (max-width: 900px) {
   .container-objetivo-carousel {
     padding: 2em;
   }
-
+  
   .carousel-slide.active {
     flex-direction: column-reverse;
   }
 
   .slide-img img {
     height: 250px;
+    min-height: unset;
+  }
+  
+  .carousel-header h2 {
+    font-size: 32px;
   }
 }
 
-.main-footer {
-  background-color: #fdfaf5;
-  color: #333;
-  padding: 60px 20px 20px 20px;
-  font-family: 'Poppins', sans-serif;
-  border-top: 4px solid #001f3f;
+.footer-ccb {   
+  color: #2b2b2b;
+  font-family: "Libre Baskerville", serif;
+  padding: 4em 2em 2em;
+  margin-top: 8em;
 }
 
-.footer-container {
-  max-width: 1100px;
+
+.footer-top {
+  max-width: 1200px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 3em;
 }
 
-.footer-column h3 {
-  color: #001f3f;
-  font-size: 1.2rem;
-  margin-bottom: 20px;
-  position: relative;
-}
 
-.footer-logo {
-  max-width: 150px;
-  margin-bottom: 15px;
-}
-
-address p {
-  font-style: normal;
-  margin: 10px 0;
-  font-size: 0.9rem;
+.footer-col h4 {
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 1.5em;
   color: #555;
 }
 
-.footer-column ul {
+.footer-col p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  text-align: justify;
+  color: #333;
+  margin-bottom: 0.8em;
+}
+
+.footer-col ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
-.footer-column ul li {
-  margin-bottom: 10px;
+.footer-col ul li {
+  margin-bottom: 0.6em;
+  font-size: 0.95rem;
+  color: #333;
 }
 
-.footer-column a {
-  color: #001f3f;
+.footer-col a {
+  color: #2b2b2b;
   text-decoration: none;
-  transition: 0.3s;
 }
 
-.footer-column a:hover {
-  color: #c41212;
+.footer-col a:hover {
   text-decoration: underline;
 }
+
+
+.footer-subscribe {
+  margin-top: 1em;
+}
+
+.footer-subscribe p {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 0.8em;
+  text-align: justify;
+}
+
+.email-box {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  max-width: 260px;
+  background: transparent;
+}
+
+.email-box input {
+  border: none;
+  padding: 0.6em 0.8em;
+  flex: 1;
+  font-family: inherit;
+  font-size: 0.85rem;
+  background: transparent;
+  color: #333;
+}
+
+.email-box input::placeholder {
+  color: #999;
+}
+
+.email-box input:focus {
+  outline: none;
+}
+
+.email-box button {
+  border: none;
+  background: none;
+  padding: 0 0.8em;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #666;
+  transition: color 0.2s ease;
+}
+
+.email-box button:hover {
+  color: #000;
+}
+
+
+.footer-social {
+  display: flex;
+  align-items: center;
+}
+
+.footer-social img {
+  width: 30px;
+  height: 30px;
+  opacity: 0.8;
+}
+
+.footer-social img:hover {
+  opacity: 1;
+}
+
 
 .footer-form {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  max-width: 280px;
 }
 
 .footer-form input,
 .footer-form textarea {
-  padding: 12px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  background: #fff;
-  font-size: 0.9rem;
+  padding: 10px;
+  border: 1px solid #ccc;
+  font-family: inherit;
+  font-size: 0.85rem;
+  background: transparent;
+}
+
+.footer-form input::placeholder,
+.footer-form textarea::placeholder {
+  color: #999;
 }
 
 .footer-form input:focus,
 .footer-form textarea:focus {
   outline: none;
-  border-color: #001f3f;
+  border-color: #000;
+}
+
+.footer-form textarea {
+  resize: none;
 }
 
 .footer-form button {
-  background-color: #c41212;
-  color: white;
-  padding: 12px;
-  border: none;
-  border-radius: 4px;
-  font-weight: bold;
+  background: none;
+  border: 1px solid #2b2b2b;
+  padding: 0.6em;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 .footer-form button:hover {
-  background-color: #001f3f;
+  background-color: #2b2b2b;
+  color: #fff;
 }
+
+.footer-divider {
+  max-width: 1200px;
+  margin: 3em auto 2em;
+  height: 1px;
+  background-color: #ddd;
+}
+
 
 .footer-bottom {
-  text-align: center;
-  margin-top: 50px;
-  padding-top: 20px;
-  border-top: 1px solid #eee;
-  font-size: 0.8rem;
-  color: #888;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  font-size: 0.85rem;
+  color: #666;
 }
 
-.slide-img img {
-  height: 250px;
+.footer-bottom p {
+  text-align: justify;
+  line-height: 1.6;
 }
+
+
+.footer-bottom {
+  display: flex;
+  justify-content: center;
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 1.2em;
+  max-width: 100px;
+}
+
+.footer-brand img {
+  display: block;
+
+}
+
 @media (max-width: 768px) {
-  .container-header {
-    padding: 100px 1rem;
+  .footer-british {
+    padding: 3em 1.5em 2em;
   }
 
-  .container-inicial h1 {
-    font-size: 32px;
-  }
-
-  .container-inicial h3 {
-    font-size: 14px;
-  }
-
-  .logoccb {
-    height: 8em;
+  .footer-brand {
+    gap: 1em;
   }
 }
+
 @media (max-width: 768px) {
   .hamburger {
     display: flex;
@@ -691,7 +816,7 @@ address p {
 
   .nav-menu.active {
     transform: translateX(0);
-    z-index: 20;
+    z-index: 1001;
     pointer-events: auto;
   }
 
@@ -755,7 +880,7 @@ address p {
 
   .slide-img img {
     min-height: unset;
-    height: 280px;
+    max-height: 280px;
   }
 }
 @media (max-width: 600px) {
@@ -766,4 +891,13 @@ address p {
   .footer-column h3 {
     font-size: 1rem;
   }
+}
+.recurso-texto p,
+.slide-content p,
+.texto-principal,
+.caixa-destaque p,
+.container-sobre p {
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
 }
