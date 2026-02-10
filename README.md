@@ -47,10 +47,9 @@ Este projeto é de caráter educacional e cultural. A licença pode ser ajustada
 
 ## 👥 Integrantes do Projeto
 
-* Jonata Monteiro
-* Pedro Roger
-* Ash
-* Antonio Pedro
+* Jonata Monteiro - JonataMonteiro
+* Pedro Roger - PedroPeixoto08
+* Antonio Pedro - pdr-mrtnsz
 * Irving Alves
 * Francisco Tarcizio
 
