@@ -4,6 +4,7 @@ Este repositório reúne os materiais, códigos e recursos do **Projeto Tecnolog
 
 O projeto integra tecnologia e ensino de inglês, promovendo experiências de aprendizagem mais criativas, dinâmicas e envolventes, além de incentivar a experimentação e a troca de conhecimentos entre alunos e professores.
 
+<a href="https://edutechccb.virtual.ufc.br/">Visite o projeto hospedado nos servidores do Instituto UFC Virtual</a>
 ---
 
 ## 📌 Sobre o Projeto
